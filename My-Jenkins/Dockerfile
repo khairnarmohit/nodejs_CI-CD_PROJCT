@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install --production
+RUN npm install
 
 # Copy remaining project files
 COPY . .
@@ -18,4 +18,5 @@ EXPOSE 3001
 
 # Start the application
 CMD ["node", "app.js"]
+
 
